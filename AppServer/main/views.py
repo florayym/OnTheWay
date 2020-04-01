@@ -7,6 +7,9 @@ import csv
 from .utils import *
 from flask_login import login_user, logout_user, login_required, current_user
 
+from itsdangerous import URLSafeTimedSerializer, SignatureExpired
+s = URLSafeTimedSerializer('Thisisasecret!')
+MAX_AGE = 3600
 
 def create_stroe():
     print('i am here')
@@ -222,7 +225,6 @@ def create_database():
     create_comment()
     return 'success'
 
-
 @main.route('/update_word_cloud', methods=['POST', 'GET'])
 # @login_required
 def update_word_cloud():
@@ -238,6 +240,33 @@ def update_word_cloud():
         'message': 'success',
         'word_cloud': url_for('static', _external=True, filename='images/word_cloud/stores/{}.png'.format(store.id)),
     })
+
+
+@main.route('/request_verification', methods=['GET', 'POST'])
+def request_verification():
+    if request.method == 'GET':
+        return '<form action="/" method="POST"><input name="email"><input type="submit"></form>'
+
+    username = request.form['username']
+    email = request.form['email']
+
+    token = s.dumps(email, salt='email-confirm')
+    msg = Message('Confirm Email', sender='yuyim@126.com', recipients=[email])
+    link = url_for('confirm_email', token=token, _external=True)
+    msg.body = '<h1>Dear {},<br><br>your email verification link is {}. It will be expired within {} minutes.</h1>'.format(username, link, (int) MAX_AGE/60)
+
+    mail.send(msg)
+
+    return '<h1>The email you entered is {}. The token is {}</h1>'.format(email, token)
+
+
+@main.route('/confirm_email/<token>')
+def confirm_email(token):
+    try:
+        email = s.loads(token, salt='email-confirm', max_age=MAX_AGE)
+    except SignatureExpired:
+        return '<h1>The token is expired!</h1>'
+    return '<h1>Email address erified!</h1>'
 
 
 @main.route('/test', methods=['GET', 'POST'])

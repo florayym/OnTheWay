@@ -190,7 +190,9 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         boolean cancel = false;
         View focusView = null;
 
+        // TODO: Check if the password is matched with email entered
         // Check for a valid password, if the user entered one.
+        /*
         if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
             mPasswordView.setError(getString(R.string.error_invalid_password));
             focusView = mPasswordView;
@@ -206,7 +208,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             mEmailView.setError(getString(R.string.error_invalid_email));
             focusView = mEmailView;
             cancel = true;
-        }
+        }*/
 
         if (cancel) {
             // There was an error; don't attempt login and focus the first
@@ -221,7 +223,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
             // Then jump to doInBackground@UserLoginTask to communicate with server
         }
     }
-
+/*
     private boolean isEmailValid(String email) {
         //TODO: Replace this with your own logic
         return email.contains("@");
@@ -231,6 +233,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         //TODO: Replace this with your own logic
         return password.length() > 4;
     }
+*/
 
     /**
      * Shows the progress UI and hides the login form.
