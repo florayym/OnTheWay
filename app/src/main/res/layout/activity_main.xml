@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Committed by xyzCS-->
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:id="@+id/swipeRefreshLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Main">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <SearchView
+                android:id="@+id/search_main"
+                android:layout_width="410dp"
+                android:layout_height="55dp"
+                android:queryHint="请输入搜索内容"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="1dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                >
+                <ImageButton
+                    android:id="@+id/Restaurant"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:src="@mipmap/eat"
+                    android:scaleType="fitCenter"
+                    tools:layout_editor_absoluteX="6dp"
+                    tools:layout_editor_absoluteY="63dp" />
+                <ImageButton
+                    android:id="@+id/Hotel"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/hotel"
+                    android:scaleType="fitCenter"
+                    tools:layout_editor_absoluteX="101dp"
+                    tools:layout_editor_absoluteY="63dp" />
+                <ImageButton
+                    android:id="@+id/Attractions"
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/play"
+                    android:scaleType="fitCenter"
+                    tools:layout_editor_absoluteX="189dp"
+                    tools:layout_editor_absoluteY="63dp" />
+                >
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/image1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="10dp"
+                        android:src="@mipmap/ic_launcher" />
+                    <TextView
+                        android:id="@+id/text1_1"
+                        android:layout_width="wrap_content"
+                        android:textSize="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="正新鸡排"
+                        android:layout_toRightOf="@+id/image1"
+                        android:layout_marginTop="10dp" />
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/star1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text1_1"
+                        android:layout_toRightOf="@+id/image1"
+                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+                    <TextView
+                        android:id="@+id/text1_3"
+                        android:textSize="20dp"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="12.35km"
+                        android:layout_below="@+id/text1_1"
+                        android:layout_toRightOf="@+id/star1" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="10dp"
+                        android:src="@mipmap/ic_launcher" />
+                    <TextView
+                        android:id="@+id/text2_1"
+                        android:layout_width="wrap_content"
+                        android:textSize="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="正新鸡排"
+                        android:layout_toRightOf="@+id/image2"
+                        android:layout_marginTop="10dp" />
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/star2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text2_1"
+                        android:layout_toRightOf="@+id/image2"
+                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+                    <TextView
+                        android:id="@+id/text2_3"
+                        android:textSize="20dp"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="12.35km"
+                        android:layout_below="@+id/text2_1"
+                        android:layout_toRightOf="@+id/star2" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="10dp"
+                        android:src="@mipmap/ic_launcher" />
+                    <TextView
+                        android:id="@+id/text3_1"
+                        android:layout_width="wrap_content"
+                        android:textSize="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="正新鸡排"
+                        android:layout_toRightOf="@+id/image3"
+                        android:layout_marginTop="10dp" />
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/star3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text3_1"
+                        android:layout_toRightOf="@+id/image3"
+                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+                    <TextView
+                        android:id="@+id/text3_3"
+                        android:textSize="20dp"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="12.35km"
+                        android:layout_below="@+id/text3_1"
+                        android:layout_toRightOf="@+id/star3" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/image4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="10dp"
+                        android:src="@mipmap/ic_launcher" />
+                    <TextView
+                        android:id="@+id/text4_1"
+                        android:layout_width="wrap_content"
+                        android:textSize="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="正新鸡排"
+                        android:layout_toRightOf="@+id/image4"
+                        android:layout_marginTop="10dp" />
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/star4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text4_1"
+                        android:layout_toRightOf="@+id/image4"
+                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+                    <TextView
+                        android:id="@+id/text4_3"
+                        android:textSize="20dp"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="12.35km"
+                        android:layout_below="@+id/text4_1"
+                        android:layout_toRightOf="@+id/star4" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/image5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_margin="10dp"
+                        android:src="@mipmap/ic_launcher" />
+                    <TextView
+                        android:id="@+id/text5_1"
+                        android:layout_width="wrap_content"
+                        android:textSize="20dp"
+                        android:layout_height="wrap_content"
+                        android:text="正新鸡排"
+                        android:layout_toRightOf="@+id/image5"
+                        android:layout_marginTop="10dp" />
+                    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+                        android:id="@+id/star5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/text5_1"
+                        android:layout_toRightOf="@+id/image5"
+                        style="@style/Widget.MaterialRatingBar.RatingBar" />
+                    <TextView
+                        android:id="@+id/text5_3"
+                        android:textSize="20dp"
+                        android:layout_width="100dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="12.35km"
+                        android:layout_below="@+id/text5_1"
+                        android:layout_toRightOf="@+id/star5" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
